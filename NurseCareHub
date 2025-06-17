@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free nursing resources, study materials, PDF viewer, upload form, and chat support for Ugandan nurses.">
+  <meta name="keywords" content="nursecarehub, nursing resources, Uganda, study notes, past papers, NurseBot, PDF viewer">
+  <meta name="author" content="Ask Wyclif">
+  <title>NurseCareHub</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8f9fa; margin: 0; padding: 0; }
+    header { background: #007bff; color: white; padding: 1em; text-align: center; }
+    nav { background: #e9ecef; display: flex; justify-content: center; padding: 0.5em; }
+    nav a { margin: 0 1em; text-decoration: none; color: #007bff; font-weight: bold; }
+    section { padding: 2em; }
+    .chatbox { border: 1px solid #ccc; padding: 1em; background: white; width: 300px; margin: auto; }
+    .chatbox input, .chatbox button { width: 100%; padding: 0.5em; margin-top: 0.5em; }
+    .uploadbox, .pdfviewer { border: 1px solid #ccc; padding: 1em; background: white; max-width: 600px; margin: auto; margin-top: 2em; }
+    footer { text-align: center; padding: 1em; background: #343a40; color: white; margin-top: 2em; }
+    iframe { width: 100%; height: 500px; border: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NurseCareHub</h1>
+    <p>Empowering Nursing Students in Uganda</p>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#study">Study Materials</a>
+    <a href="#upload">Upload Notes</a>
+    <a href="#pdf">View PDF</a>
+    <a href="#chat">Ask NurseBot</a>
+    <a href="#contact">Contact</a>
+  </nav>  <section id="home">
+    <h2>Welcome to NurseCareHub</h2>
+    <p>Get free access to nursing study materials, clinical guides, uploads, and chat help from our virtual assistant NurseBot.</p>
+  </section>  <section id="study">
+    <h2>Study Materials</h2>
+    <ul>
+      <li>📝 Nursing Notes (Anatomy, Midwifery, Pharmacology...)</li>
+      <li>📚 Past Papers (By subject and year)</li>
+      <li>💉 Clinical Procedures Guide</li>
+    </ul>
+  </section>  <section id="upload">
+    <h2>Upload Study Notes</h2>
+    <div class="uploadbox">
+      <p><strong>Coming Soon:</strong> You’ll be able to upload PDF, Word or Image files for other students.</p>
+      <p><em>Feature will allow secure upload and sharing.</em></p>
+    </div>
+  </section>  <section id="pdf">
+    <h2>View Sample PDF</h2>
+    <div class="pdfviewer">
+      <iframe src="https://docs.google.com/gview?url=https://file-examples-com.github.io/uploads/2017/10/file-sample_150kB.pdf&embedded=true"></iframe>
+    </div>
+  </section>  <section id="chat">
+    <h2>Ask NurseBot 🤖</h2>
+    <div class="chatbox">
+      <p><strong>Ask anything, e.g. "Paracetamol dosage in children"</strong></p>
+      <input type="text" id="question" placeholder="Type your question here...">
+      <button onclick="getAnswer()">Send</button>
+      <p id="answer"></p>
+    </div>
+  </section>  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:nursecarehub@gmail.com">nursecarehub@gmail.com</a></p>
+    <p>Phone/WhatsApp: +256 700 123 456</p>
+  </section>  <footer>
+    <p>&copy; 2025 NurseCareHub | Built by Ask Wyclif</p>
+  </footer>  <script>
+    function getAnswer() {
+      const question = document.getElementById("question").value.toLowerCase();
+      let answer = "Sorry, I don't understand that yet. Please try another question.";
+
+      if (question.includes("paracetamol")) {
+        answer = "Paracetamol dosage for children is 10–15 mg/kg every 4–6 hours. Max 5 doses/day.";
+      } else if (question.includes("iron")) {
+        answer = "Iron supplements are commonly used to treat anemia. Usual dose: 60–120 mg/day.";
+      } else if (question.includes("immunization")) {
+        answer = "Uganda EPI schedule includes BCG, Polio, DPT-HepB-Hib, Measles, HPV, etc.";
+      }
+
+      document.getElementById("answer").innerText = answer;
+    }
+  </script></body>
+</html>
